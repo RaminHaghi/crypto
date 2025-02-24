@@ -1,9 +1,39 @@
 @import 'tailwindcss';
 
+@theme {
+    --color-primary: #0c1b44;
+    --color-text-main: rgba(255, 255, 255);
+    --color-text-op-40: rgba(255, 255, 255, 40%);
+    --font-inter: Inter;
+}
+
 @utility container {
     margin-right: auto;
     margin-left: auto;
 }
 
+@utility bg-gradient-to-r {
+    background-image: linear-gradient(
+        to right,
+        rgb(189, 36, 223),
+        rgb(45, 106, 222)
+    );
+}
+
+@utility bg-gradient-to-l {
+    background-image: linear-gradient(
+        to right,
+        rgb(45, 106, 222),
+        rgb(189, 36, 223)
+    );
+}
+
 @layer components {
+    .bg-sections {
+        background-image: linear-gradient(
+            90deg,
+            rgba(189, 36, 223, 50%),
+            rgba(45, 106, 222, 50%)
+        );
+    }
 }
