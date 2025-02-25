@@ -1,8 +1,8 @@
 @import 'tailwindcss';
 
 @font-face {
-    font-family: Inter-medium;
-    src: url('../fonts/Inter_18pt-Medium.ttf') format('truetype');
+    font-family: Inter-regular;
+    src: url('../fonts/Inter_18pt-Regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -17,9 +17,10 @@
 
 @theme {
     --color-primary: #0c1b44;
+    --color-my-purple: #bd24df;
     --color-text-main: rgba(255, 255, 255);
     --color-text-op-40: rgba(255, 255, 255, 40%);
-    --font-inter-md: Inter-medium;
+    --font-inter-reg: Inter-regular;
     --font-inter-sb: Inter-semibold;
     --font-inter-bold: Inter-bold;
 }
@@ -46,11 +47,30 @@
 }
 
 @layer components {
-    .bg-sections {
-        background-image: linear-gradient(
-            90deg,
-            rgba(189, 36, 223, 50%),
-            rgba(45, 106, 222, 50%)
-        );
+    .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.5rem;
+        width: 5.5rem;
+        height: 2.75rem;
+    }
+
+    .menu-active {
+        border-bottom: 0.094rem solid #fff;
+    }
+
+    .menu-open .mobile-menu__line {
+        background-color: transparent !important;
+    }
+
+    .menu-open span::before {
+        height: 2.3px !important;
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+    .menu-open span::after {
+        height: 2.3px !important;
+        transform: translateY(10px) rotate(45deg);
     }
 }

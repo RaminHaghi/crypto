@@ -10,7 +10,65 @@
         />
         <link rel="stylesheet" href="./styles/app.css" />
     </head>
-    <body>
+    <body class="bg-gray-900 font-inter-reg">
+        <header class="fixed top-0 w-full z-40 py-8">
+            <div class="container flex items-center justify-between">
+                <div class="app-main">
+                    <img src="./images/logo/logo.svg" alt="Main Logo" />
+                </div>
+
+                <div
+                    class="mobile-menu cursor-pointer size-9 flex items-center justify-center transition-opacity lg:hidden"
+                >
+                    <span
+                        class="relative mobile-menu__line bg-white w-9 h-0.5 before:absolute before:w-full before:h-0.5 before:bg-white before:top-2.5 after:absolute after:w-full after:h-0.5 after:bg-white after:-top-2.5 transition-all before:transition-transform after:transition-transform"
+                    ></span>
+                </div>
+                <nav
+                    class="fixed top-0 right-0 bottom-0 p-4 w-80 flex flex-col bg-primary z-50 main-menu text-white gap-4 *:cursor-pointer backdrop-blur-xl"
+                >
+                    <div class="flex justify-between items-center">
+                        <img
+                            src="./images/logo/logo.svg"
+                            alt="mobile logo"
+                            class="w-45"
+                        />
+                    </div>
+
+                    <a href="#">Home</a>
+                    <a href="#">Exchange</a>
+                    <a href="#">Feature</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Docs</a>
+
+                    <div class="mobile-btns flex flex-col gap-3">
+                        <a
+                            href="#"
+                            class="w-full p-2 rounded-md border border-my-purple text-my-purple"
+                            >Sign in</a
+                        >
+                        <a href="#" class="w-full p-2 rounded-md bg-my-purple"
+                            >Sign up</a
+                        >
+                    </div>
+                </nav>
+
+                <div
+                    class="header-links hidden text-white lg:flex items-center justify-center gap-3"
+                >
+                    <a
+                        href="#"
+                        class="btn bg-gradient-to-r hover:bg-gradient-to-l"
+                        >Sign in</a
+                    >
+                    <a
+                        href="#"
+                        class="btn bg-gradient-to-r hover:bg-gradient-to-l"
+                        >Sign up</a
+                    >
+                </div>
+            </div>
+        </header>
         <script src="./scripts/app.js"></script>
     </body>
 </html>
