@@ -17,6 +17,7 @@
 
 @theme {
     --color-primary: #0c1b44;
+    --color-black-trp: rgba(0, 0, 0, 40%);
     --color-app-purple: #bd24df;
     --color-text-main: rgba(255, 255, 255);
     --color-text-op-40: rgba(255, 255, 255, 40%);
@@ -37,6 +38,14 @@
     margin-left: auto;
     padding-right: 15px;
     padding-left: 15px;
+}
+
+@utility bg-gradiendt-app {
+    background-image: linear-gradient(
+        to right,
+        rgba(189, 36, 223, 17%),
+        rgba(45, 106, 222, 17%)
+    );
 }
 
 @utility bg-gradient-to-r {
@@ -71,10 +80,10 @@
     }
 
     .menu-open span::before {
-        transform: translateY(-0.62rem) rotate(-45deg);
+        transform: translateY(-0.53rem) rotate(-45deg);
     }
 
     .menu-open span::after {
-        transform: translateY(0.62rem) rotate(45deg);
+        transform: translateY(0.53rem) rotate(45deg);
     }
 }

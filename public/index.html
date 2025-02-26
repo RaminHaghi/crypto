@@ -38,7 +38,7 @@
 
                 <!--Mobile Menu Section-->
                 <div
-                    class="background-blur fixed top-0 right-0 bottom-0 left-0 z-40 backdrop-blur-xs hidden xl:hidden"
+                    class="background-blur fixed top-0 right-0 bottom-0 left-0 z-30 backdrop-blur-xs hidden xl:hidden"
                 ></div>
                 <div
                     class="hamburger-btn cursor-pointer h-6 flex items-center justify-center transition-opacity xl:hidden"
@@ -48,7 +48,7 @@
                     ></span>
                 </div>
                 <div
-                    class="nav-mobile fixed top-0 -right-90 bottom-0 w-64 md:w-84 bg-primary p-5 text-white z-50 xl:hidden transition-all"
+                    class="nav-mobile fixed top-0 -right-90 bottom-0 w-64 md:w-84 bg-primary p-5 text-white z-40 xl:hidden transition-all"
                 >
                     <div
                         class="nav-mobile__header flex items-center justify-between mb-9"
@@ -92,9 +92,22 @@
                         <a href="#" class="bg-app-purple">Sing up</a>
                     </div>
                 </div>
+
+                <!--sign in / sign up-->
+                <div
+                    class="bg-sign-up fixed z-50 top-0 right-0 bottom-0 left-0 w-full h-full bg-black-trp hidden"
+                ></div>
+
+                <div
+                    class="account-window fixed top-0 right-0 bottom-0 left-0 m-auto w-130 h-160 rounded-md bg-gradiendt-app backdrop-blur-xs"
+                ></div>
             </div>
         </header>
-
+        <main
+            class="fixed top-0 right-0 bottom-0 left-0 m-auto flex items-center justify-center"
+        >
+            <h1 class="text-white text-8xl">ramin</h1>
+        </main>
         <script src="./scripts/app.js"></script>
     </body>
 </html>
