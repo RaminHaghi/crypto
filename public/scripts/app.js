@@ -1,8 +1,20 @@
-const hamburgerMenu = document.querySelector('.mobile-menu');
-const mainMenu = document.querySelector('.main-menu');
+const hamburgerMenu = document.querySelector('.hamburger-btn');
+const backgroundBlur = document.querySelector('.background-blur');
+const navMobile = document.querySelector('.nav-mobile');
+const menuCrossClose = document.querySelector('.nav-close-btn');
 
-function openMobileMenu() {
-    hamburgerMenu.classList.toggle('menu-open');
+function mobileNavOpen() {
+    hamburgerMenu.classList.add('menu-open');
+    backgroundBlur.classList.remove('hidden');
+    navMobile.style.right = '0';
 }
 
-hamburgerMenu.addEventListener('click', openMobileMenu);
+function closeNavMobile() {
+    hamburgerMenu.classList.remove('menu-open');
+    backgroundBlur.classList.add('hidden');
+    navMobile.style.right = '-22.5rem';
+}
+
+hamburgerMenu.addEventListener('click', mobileNavOpen);
+backgroundBlur.addEventListener('click', closeNavMobile);
+menuCrossClose.addEventListener('click', closeNavMobile);

@@ -17,17 +17,26 @@
 
 @theme {
     --color-primary: #0c1b44;
-    --color-my-purple: #bd24df;
+    --color-app-purple: #bd24df;
     --color-text-main: rgba(255, 255, 255);
     --color-text-op-40: rgba(255, 255, 255, 40%);
     --font-inter-reg: Inter-regular;
     --font-inter-sb: Inter-semibold;
     --font-inter-bold: Inter-bold;
+    --breakpoint-*: initial;
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 640px;
+    --breakpoint-lg: 768px;
+    --breakpoint-xl: 1024px;
+    --breakpoint-2xl: 1280px;
+    --breakpoint-3xl: 1536px;
 }
 
 @utility container {
     margin-right: auto;
     margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 @utility bg-gradient-to-r {
@@ -54,10 +63,7 @@
         border-radius: 0.5rem;
         width: 5.5rem;
         height: 2.75rem;
-    }
-
-    .menu-active {
-        border-bottom: 0.094rem solid #fff;
+        font-family: Inter-semibold;
     }
 
     .menu-open .mobile-menu__line {
@@ -65,12 +71,10 @@
     }
 
     .menu-open span::before {
-        height: 2.3px !important;
-        transform: translateY(-10px) rotate(-45deg);
+        transform: translateY(-0.62rem) rotate(-45deg);
     }
 
     .menu-open span::after {
-        height: 2.3px !important;
-        transform: translateY(10px) rotate(45deg);
+        transform: translateY(0.62rem) rotate(45deg);
     }
 }
