@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="./styles/app.css" />
     </head>
 
-    <body class="bg-gray-900 font-inter-reg">
+    <body class="bg-gray-900 font-inter-reg overflow-x-hidden">
         <header class="fixed items-center top-0 w-full z-30 py-8">
             <div class="container flex items-center justify-between">
                 <div class="app-main">
@@ -257,14 +257,49 @@
             </div>
         </header>
 
-        <main class="main">
-            <section class="home-page">
-                <div class="container">
-                    <div class="content-wrapper flex items-center *:basis-1/2">
-                        <div
-                            class="left-content text-white bg-white h-full"
-                        ></div>
-                        <div class="right-content bg-white h-full"></div>
+        <main class="main mt-32">
+            <section id="home-page">
+                <div class="container pt-15 xl:pt-64">
+                    <div
+                        class="grid grid-cols-1 xl:grid-cols-12 h-auto text-white"
+                    >
+                        <div class="xl:col-span-7 text-center xl:text-start">
+                            <h1
+                                class="text-4xl sm:text-5xl xl:text-7xl font-inter-bold max-w-157 mx-auto xl:mx-0"
+                            >
+                                Buy, Sell & Accept Digital Assets
+                            </h1>
+                            <p class="max-w-120 mt-6 mb-9 mx-auto xl:mx-0">
+                                Lorem Ipsum is simply dummy text of the printing
+                                and typesetting industry. Lorem Ipsum has been
+                                the industry standard dummy text ever since the
+                                1500s
+                            </p>
+                            <div
+                                class="max-w-80 flex items-center gap-4 *:basis-1/2 mx-auto xl:mx-0"
+                            >
+                                <a
+                                    href="#"
+                                    class="btn bg-gradient-to-r hover:bg-gradient-to-l"
+                                    >Get Started</a
+                                >
+                                <a href="#" class="btn gap-2 justify-between">
+                                    <img
+                                        class="w-12 h-12"
+                                        src="./images/banner/playbutton.svg"
+                                        alt="Play button"
+                                    />
+                                    How it work
+                                </a>
+                            </div>
+                        </div>
+                        <div class="xl:col-span-5">
+                            <img
+                                class="xl:max-w-260 xl:-m-48"
+                                src="./images/banner/banner.png"
+                                alt="Banner main"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
