@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" class="scroll-smooth">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +8,7 @@
             name="description"
             content="about crypto, digital marketing, bitcoin"
         />
+        <meta name="author" content="Ramin Haghi" />
         <link rel="stylesheet" href="./styles/app.css" />
     </head>
 
@@ -32,8 +33,8 @@
                 <div
                     class="header-links hidden text-white xl:flex items-center justify-center gap-3 *:bg-gradient-to-r *:hover:bg-gradient-to-l *:transition-colors"
                 >
-                    <a href="#" class="btn">Sign in</a>
-                    <a href="#" class="btn">Sign up</a>
+                    <a href="#" class="btn sign-in-btn-desktop">Sign in</a>
+                    <a href="#" class="btn sign-up-btn-desktop">Sign up</a>
                 </div>
 
                 <!--Mobile Menu Section-->
@@ -47,8 +48,9 @@
                         class="relative mobile-menu__line bg-white w-6 h-0.5 before:absolute before:w-full before:h-0.5 before:bg-white before:top-2 after:absolute after:w-full after:h-0.5 after:bg-white after:-top-2 transition-all before:transition-transform after:transition-transform"
                     ></span>
                 </div>
+
                 <div
-                    class="nav-mobile fixed top-0 -right-90 bottom-0 w-64 md:w-84 bg-primary p-5 text-white z-40 xl:hidden transition-all"
+                    class="nav-mobile fixed top-0 -right-90 bottom-0 w-64 md:w-84 bg-primary p-5 text-white z-31 xl:hidden transition-all"
                 >
                     <div
                         class="nav-mobile__header flex items-center justify-between mb-9"
@@ -60,17 +62,18 @@
                         />
 
                         <svg
-                            class="nav-close-btn w-5 h-5 fill-app-purple cursor-pointer"
+                            class="nav-close-btn w-4 h-4 fill-gray-400 hover:fill-app-purple cursor-pointer transition-colors"
                             xmlns="http://www.w3.org/2000/svg"
                             xml:space="preserve"
                             id="close"
-                            x="0"
-                            y="0"
                             version="1.1"
-                            viewBox="0 0 512 512"
+                            viewBox="0 0 40 40"
                         >
                             <path
-                                d="M437.5 386.6L306.9 256l130.6-130.6c14.1-14.1 14.1-36.8 0-50.9-14.1-14.1-36.8-14.1-50.9 0L256 205.1 125.4 74.5c-14.1-14.1-36.8-14.1-50.9 0-14.1 14.1-14.1 36.8 0 50.9L205.1 256 74.5 386.6c-14.1 14.1-14.1 36.8 0 50.9 14.1 14.1 36.8 14.1 50.9 0L256 306.9l130.6 130.6c14.1 14.1 36.8 14.1 50.9 0 14-14.1 14-36.9 0-50.9z"
+                                d="M28.1 26.8c.4.4.4 1 0 1.4-.2.2-.5.3-.7.3s-.5-.1-.7-.3l-6.8-6.8-6.8 6.8c-.2.2-.5.3-.7.3s-.5-.1-.7-.3c-.4-.4-.4-1 0-1.4l6.8-6.8-6.8-6.8c-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0l6.8 6.8 6.8-6.8c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4L21.3 20l6.8 6.8z"
+                            ></path>
+                            <path
+                                d="M19.9 40c-11 0-20-9-20-20s9-20 20-20c4.5 0 8.7 1.5 12.3 4.2.4.3.5 1 .2 1.4-.3.4-1 .5-1.4.2C27.8 3.3 24 2 20 2 10.1 2 2 10.1 2 20s8.1 18 18 18 18-8.1 18-18c0-3.2-.9-6.4-2.5-9.2-.3-.5-.1-1.1.3-1.4.5-.3 1.1-.1 1.4.3C39 12.8 40 16.3 40 19.9 39.9 31 30.9 40 19.9 40z"
                             ></path>
                         </svg>
                     </div>
@@ -84,30 +87,189 @@
                     </div>
 
                     <div
-                        class="nav-mobile__btns flex flex-col gap-2.5 *:w-full *:py-2 *:px-4 *:border *:border-app-purple *:rounded-md *:hover:bg-sky-500 *:transition-colors"
+                        class="nav-mobile__btns flex flex-col gap-2.5 *:w-full *:py-1 *:md:py-2 *:px-4 *:border *:border-app-purple *:rounded-md *:hover:bg-sky-500 *:transition-colors"
                     >
-                        <a href="#" class="text-app-purple hover:text-white"
+                        <a
+                            href="#"
+                            class="sign-in-btn-mobile text-app-purple hover:text-white"
                             >Sign in</a
                         >
-                        <a href="#" class="bg-app-purple">Sing up</a>
+                        <a href="#" class="sign-up-btn-mobile bg-app-purple"
+                            >Sing up</a
+                        >
                     </div>
                 </div>
 
                 <!--sign in / sign up-->
                 <div
-                    class="bg-sign-up fixed z-50 top-0 right-0 bottom-0 left-0 w-full h-full bg-black-trp hidden"
+                    class="hidden bg-sign-up fixed z-40 top-0 right-0 bottom-0 left-0 w-full h-full bg-black-trp"
                 ></div>
 
                 <div
-                    class="account-window fixed top-0 right-0 bottom-0 left-0 m-auto w-130 h-160 rounded-md bg-gradiendt-app backdrop-blur-xs"
-                ></div>
+                    class="account-window fixed z-50 hidden flex-col justify-between p-5 top-0 right-0 bottom-0 left-0 m-auto max-w-85 h-135 md:max-w-115 md:h-160 md:p-10 rounded-md bg-gradiendt-app backdrop-blur-md text-white"
+                >
+                    <div
+                        class="account-window__header flex flex-col items-center"
+                    >
+                        <img
+                            src="./images/logo/logo.svg"
+                            alt="app logo"
+                            class="w-45 relative"
+                        />
+
+                        <svg
+                            class="sign-close-btn absolute top-4 right-4 w-5 h-5 fill-gray-400 hover:fill-app-purple cursor-pointer transition-colors"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xml:space="preserve"
+                            id="close"
+                            version="1.1"
+                            viewBox="0 0 40 40"
+                        >
+                            <path
+                                d="M28.1 26.8c.4.4.4 1 0 1.4-.2.2-.5.3-.7.3s-.5-.1-.7-.3l-6.8-6.8-6.8 6.8c-.2.2-.5.3-.7.3s-.5-.1-.7-.3c-.4-.4-.4-1 0-1.4l6.8-6.8-6.8-6.8c-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0l6.8 6.8 6.8-6.8c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4L21.3 20l6.8 6.8z"
+                            ></path>
+                            <path
+                                d="M19.9 40c-11 0-20-9-20-20s9-20 20-20c4.5 0 8.7 1.5 12.3 4.2.4.3.5 1 .2 1.4-.3.4-1 .5-1.4.2C27.8 3.3 24 2 20 2 10.1 2 2 10.1 2 20s8.1 18 18 18 18-8.1 18-18c0-3.2-.9-6.4-2.5-9.2-.3-.5-.1-1.1.3-1.4.5-.3 1.1-.1 1.4.3C39 12.8 40 16.3 40 19.9 39.9 31 30.9 40 19.9 40z"
+                            ></path>
+                        </svg>
+                    </div>
+
+                    <div
+                        class="account-window__btn w-full flex flex-col md:flex-row items-center gap-6 *:bg-gradient-to-r md:*:hover:bg-gradient-to-l *:w-full *:md:basis-1/2 *:rounded-md opacity-100 md:*:opacity-80 *:hover:opacity-100 py-2 *:md:py-5 *:transition-all"
+                    >
+                        <a href="#" class="btn sign-in-google gap-4"
+                            >Sign in
+                            <svg
+                                class="w-6 h-6"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"
+                                id="google"
+                            >
+                                <path
+                                    fill="#fbbb00"
+                                    d="M113.47 309.408 95.648 375.94l-65.139 1.378C11.042 341.211 0 299.9 0 256c0-42.451 10.324-82.483 28.624-117.732h.014L86.63 148.9l25.404 57.644c-5.317 15.501-8.215 32.141-8.215 49.456.002 18.792 3.406 36.797 9.651 53.408z"
+                                ></path>
+                                <path
+                                    fill="#518ef8"
+                                    d="M507.527 208.176C510.467 223.662 512 239.655 512 256c0 18.328-1.927 36.206-5.598 53.451-12.462 58.683-45.025 109.925-90.134 146.187l-.014-.014-73.044-3.727-10.338-64.535c29.932-17.554 53.324-45.025 65.646-77.911h-136.89V208.176h245.899z"
+                                ></path>
+                                <path
+                                    fill="#28b446"
+                                    d="m416.253 455.624.014.014C372.396 490.901 316.666 512 256 512c-97.491 0-182.252-54.491-225.491-134.681l82.961-67.91c21.619 57.698 77.278 98.771 142.53 98.771 28.047 0 54.323-7.582 76.87-20.818l83.383 68.262z"
+                                ></path>
+                                <path
+                                    fill="#f14336"
+                                    d="m419.404 58.936-82.933 67.896C313.136 112.246 285.552 103.82 256 103.82c-66.729 0-123.429 42.957-143.965 102.724l-83.397-68.276h-.014C71.23 56.123 157.06 0 256 0c62.115 0 119.068 22.126 163.404 58.936z"
+                                ></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="btn sign-in-github gap-4"
+                            >Sign in
+                            <svg
+                                class="w-6 h-6 fill-white"
+                                xmlns="http://www.w3.org/2000/svg"
+                                enable-background="new 0 0 28 27.311"
+                                viewBox="0 0 28 27.311"
+                                id="github"
+                            >
+                                <path
+                                    d="M28,14c0-7.732-6.268-14-14-14S0,6.268,0,14c0,6.221,4.061,11.488,9.674,13.311c0.767-0.235,0.803-0.702,0.803-0.702s0-1.383,0-2.661c-0.843,0.155-1.89,0.157-2.271,0.157c-0.464,0-2.009-0.386-2.689-2.132c-0.68-1.746-1.947-1.916-1.947-2.225s0.278-0.371,0.278-0.371s0.17,0,0.927,0c0.757,0,1.514,1.267,2.04,2.04s1.792,0.927,2.411,0.927c0.347,0,0.885-0.175,1.294-0.329c0.167-1.082,0.792-1.896,0.792-1.896c-6.243-0.556-6.397-5.223-6.397-7.046c0-1.823,1.484-3.616,1.484-3.616s-0.719-2.04,0.185-3.709c1.947,0.015,3.894,1.483,3.894,1.483S12.238,6.676,14,6.676s3.523,0.556,3.523,0.556s1.947-1.468,3.894-1.483c0.904,1.669,0.185,3.709,0.185,3.709s1.484,1.792,1.484,3.616c0,1.823-0.155,6.49-6.397,7.046c0,0,0.834,1.082,0.834,2.411s0,4.08,0,4.08s0.035,0.466,0.803,0.702C23.939,25.488,28,20.221,28,14z"
+                                ></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <p class="or-text text-center text-white">OR</p>
+
+                    <form
+                        class="*:w-full *:rounded-md *:border *:border-white *:px-2 *:py-1.5 *:md:py-2.5 *:focus:border-app-purple *:outline-0 flex flex-col gap-5 mb-2.5"
+                    >
+                        <input
+                            class="name-input hidden"
+                            autocomplete="off"
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="Name"
+                        />
+
+                        <input
+                            class="phone-input hidden"
+                            autocomplete="off"
+                            type="text"
+                            maxlength="11"
+                            name="phone number"
+                            id="phone-number"
+                            placeholder="Phone"
+                        />
+
+                        <input
+                            class="email-input"
+                            autocomplete="off"
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Email"
+                        />
+
+                        <input
+                            class="password-input"
+                            autocomplete="off"
+                            type="password"
+                            name="password"
+                            id="password"
+                            placeholder="Password"
+                        />
+                        <button
+                            type="submit"
+                            class="sign-btn w-full bg-app-purple hover:bg-sky-500 border-none cursor-pointer transition-colors"
+                        >
+                            Sign in
+                        </button>
+                    </form>
+
+                    <div
+                        class="sign-in-footer flex flex-col items-center gap-2 text-center"
+                    >
+                        <a href="#">Forget Password?</a>
+                        <span
+                            >Not a member yet?
+                            <a href="#" class="text-app-purple footer-signup"
+                                >Sign up</a
+                            >
+                        </span>
+                    </div>
+
+                    <div class="sign-up-footer text-center hidden">
+                        <p class="mb-2">
+                            By creating an account you are agree with our
+                            <a href="#" class="text-app-purple">Privacy </a> and
+                            <a href="#" class="text-app-purple">Policy</a>
+                        </p>
+                        <span
+                            >Already have an account?
+                            <a href="#" class="footer-signin text-app-purple"
+                                >Sign in</a
+                            ></span
+                        >
+                    </div>
+                </div>
             </div>
         </header>
-        <main
-            class="fixed top-0 right-0 bottom-0 left-0 m-auto flex items-center justify-center"
-        >
-            <h1 class="text-white text-8xl">ramin</h1>
+
+        <main class="main">
+            <section class="home-page">
+                <div class="container">
+                    <div class="content-wrapper flex items-center *:basis-1/2">
+                        <div
+                            class="left-content text-white bg-white h-full"
+                        ></div>
+                        <div class="right-content bg-white h-full"></div>
+                    </div>
+                </div>
+            </section>
         </main>
+
         <script src="./scripts/app.js"></script>
     </body>
 </html>
