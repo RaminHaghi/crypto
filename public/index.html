@@ -13,7 +13,9 @@
     </head>
 
     <body class="bg-gray-900 font-inter-reg overflow-x-hidden">
-        <header class="fixed items-center top-0 w-full z-30 py-8">
+        <header
+            class="fixed items-center top-0 w-full z-30 py-8 transition-all duration-300"
+        >
             <div class="container flex items-center justify-between">
                 <div class="app-main">
                     <img src="./images/logo/logo.svg" alt="App Logo" />
@@ -106,7 +108,7 @@
                 ></div>
 
                 <div
-                    class="account-window fixed z-50 hidden flex-col justify-between p-5 top-0 right-0 bottom-0 left-0 m-auto max-w-85 h-135 md:max-w-115 md:h-160 md:p-10 rounded-md bg-gradiendt-app backdrop-blur-md text-white"
+                    class="account-window fixed z-50 hidden flex-col justify-between p-5 top-0 right-0 bottom-0 left-0 m-auto max-w-85 h-135 md:max-w-115 md:h-160 md:p-10 rounded-md bg-gradient-app backdrop-blur-md text-white"
                 >
                     <div
                         class="account-window__header flex flex-col items-center"
@@ -272,20 +274,22 @@
                             <p class="max-w-120 mt-6 mb-9 mx-auto xl:mx-0">
                                 Lorem Ipsum is simply dummy text of the printing
                                 and typesetting industry. Lorem Ipsum has been
-                                the industry standard dummy text ever since the
-                                1500s
+                                the industry standard text ever since the 1500s
                             </p>
                             <div
                                 class="max-w-80 flex items-center gap-4 *:basis-1/2 mx-auto xl:mx-0"
                             >
                                 <a
                                     href="#"
-                                    class="btn bg-gradient-to-r hover:bg-gradient-to-l"
+                                    class="btn bg-gradient-to-r hover:bg-gradient-to-l h-10 md:h-11"
                                     >Get Started</a
                                 >
-                                <a href="#" class="btn gap-2 justify-between">
+                                <a
+                                    href="#"
+                                    class="btn gap-2 md:justify-between"
+                                >
                                     <img
-                                        class="w-12 h-12"
+                                        class="w-10 h-10 md:w-12 md:h-12"
                                         src="./images/banner/playbutton.svg"
                                         alt="Play button"
                                     />
@@ -293,11 +297,56 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="xl:col-span-5">
+                        <div class="xl:col-span-5 mt-10 xl:mt-auto">
                             <img
                                 class="xl:max-w-260 xl:-m-48"
                                 src="./images/banner/banner.png"
                                 alt="Banner main"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="companies" class="my-54">
+                <div class="container">
+                    <div
+                        class="grid grid-cols-2 lg:grid-cols-3 3xl:grid-cols-12 *:mx-auto"
+                    >
+                        <div class="col-span-1 3xl:col-span-2">
+                            <img
+                                src="./images/companies/birdseye.svg"
+                                alt="companies"
+                            />
+                        </div>
+                        <div class="col-span-1 3xl:col-span-2">
+                            <img
+                                src="./images/companies/break.svg"
+                                alt="companies"
+                            />
+                        </div>
+                        <div class="col-span-1 3xl:col-span-2">
+                            <img
+                                src="./images/companies/keddar.svg"
+                                alt="companies"
+                            />
+                        </div>
+                        <div class="col-span-1 3xl:col-span-2">
+                            <img
+                                src="./images/companies/shield.svg"
+                                alt="companies"
+                            />
+                        </div>
+                        <div class="col-span-1 3xl:col-span-2">
+                            <img
+                                src="./images/companies/tandov.svg"
+                                alt="companies"
+                            />
+                        </div>
+                        <div class="col-span-1 3xl:col-span-2">
+                            <img
+                                src="./images/companies/tree.svg"
+                                alt="companies"
                             />
                         </div>
                     </div>

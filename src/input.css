@@ -40,12 +40,16 @@
     padding-left: 15px;
 }
 
-@utility bg-gradiendt-app {
+@utility bg-gradient-app {
     background-image: linear-gradient(
         to right,
         rgba(189, 36, 223, 17%),
         rgba(45, 106, 222, 17%)
     );
+}
+
+@utility bg-scroll-header {
+    background-image: linear-gradient(to right, #410c4c, #0a2351);
 }
 
 @utility bg-gradient-to-r {

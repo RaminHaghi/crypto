@@ -82,6 +82,21 @@ function closeSignEsc(event) {
     }
 }
 
+window.addEventListener('scroll', function () {
+    const header = this.document.querySelector('header');
+    if (window.scrollY > 80) {
+        header.classList.add('bg-scroll-header');
+        header.classList.remove('py-8');
+        header.classList.add('py-3');
+        header.classList.remove('bg-transparent');
+    } else {
+        header.classList.add('bg-transparent');
+        header.classList.remove('py-3');
+        header.classList.add('py-8');
+        header.classList.remove('bg-scroll-header');
+    }
+});
+
 hamburgerMenu.addEventListener('click', mobileNavOpen);
 backgroundBlur.addEventListener('click', closeNavMobile);
 menuCrossClose.addEventListener('click', closeNavMobile);
