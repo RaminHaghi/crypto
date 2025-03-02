@@ -19,7 +19,7 @@
     --color-primary: #0c1b44;
     --color-black-trp: rgba(0, 0, 0, 40%);
     --color-app-purple: #bd24df;
-    --color-text-main: rgba(255, 255, 255);
+    --color-title-section: rgba(255, 255, 255, 80%);
     --color-text-op-40: rgba(255, 255, 255, 40%);
     --font-inter-reg: Inter-regular;
     --font-inter-sb: Inter-semibold;
@@ -40,11 +40,27 @@
     padding-left: 15px;
 }
 
-@utility bg-gradient-app {
+@utility bg-gradient-sign {
     background-image: linear-gradient(
         to right,
         rgba(189, 36, 223, 17%),
         rgba(45, 106, 222, 17%)
+    );
+}
+
+@utility bg-section {
+    background-image: linear-gradient(
+        90deg,
+        rgba(189, 36, 223, 25%),
+        rgba(45, 106, 222, 25%)
+    );
+}
+
+@utility bg-section-mobile {
+    background-image: linear-gradient(
+        90deg,
+        rgba(189, 36, 223, 70%),
+        rgba(45, 106, 222, 70%)
     );
 }
 

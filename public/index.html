@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="./styles/app.css" />
     </head>
 
-    <body class="bg-gray-900 font-inter-reg overflow-x-hidden">
+    <body class="bg-black font-inter-reg overflow-x-hidden">
         <header
             class="fixed items-center top-0 w-full z-30 py-8 transition-all duration-300"
         >
@@ -108,7 +108,7 @@
                 ></div>
 
                 <div
-                    class="account-window fixed z-50 hidden flex-col justify-between p-5 top-0 right-0 bottom-0 left-0 m-auto max-w-85 h-135 md:max-w-115 md:h-160 md:p-10 rounded-md bg-gradient-app backdrop-blur-md text-white"
+                    class="account-window fixed z-50 hidden flex-col justify-between p-5 top-0 right-0 bottom-0 left-0 m-auto max-w-85 h-135 md:max-w-115 md:h-160 md:p-10 rounded-md bg-gradient-sign backdrop-blur-md text-white"
                 >
                     <div
                         class="account-window__header flex flex-col items-center"
@@ -261,6 +261,9 @@
 
         <main class="main mt-32">
             <section id="home-page">
+                <div
+                    class="absolute w-full h-full bg-section-mobile sm:bg-section blur-[390px] -z-10"
+                ></div>
                 <div class="container pt-15 xl:pt-64">
                     <div
                         class="grid grid-cols-1 xl:grid-cols-12 h-auto text-white"
@@ -291,6 +294,7 @@
                                     <img
                                         class="w-10 h-10 md:w-12 md:h-12"
                                         src="./images/banner/playbutton.svg"
+                                        loading="lazy"
                                         alt="Play button"
                                     />
                                     How it work
@@ -301,6 +305,7 @@
                             <img
                                 class="xl:max-w-260 xl:-m-48"
                                 src="./images/banner/banner.png"
+                                loading="lazy"
                                 alt="Banner main"
                             />
                         </div>
@@ -308,7 +313,7 @@
                 </div>
             </section>
 
-            <section id="companies" class="my-54">
+            <section id="companies" class="my-20 xl:my-54">
                 <div class="container">
                     <div
                         class="grid grid-cols-2 lg:grid-cols-3 3xl:grid-cols-12 *:mx-auto"
@@ -316,38 +321,169 @@
                         <div class="col-span-1 3xl:col-span-2">
                             <img
                                 src="./images/companies/birdseye.svg"
+                                loading="lazy"
                                 alt="companies"
                             />
                         </div>
                         <div class="col-span-1 3xl:col-span-2">
                             <img
                                 src="./images/companies/break.svg"
+                                loading="lazy"
                                 alt="companies"
                             />
                         </div>
                         <div class="col-span-1 3xl:col-span-2">
                             <img
                                 src="./images/companies/keddar.svg"
+                                loading="lazy"
                                 alt="companies"
                             />
                         </div>
                         <div class="col-span-1 3xl:col-span-2">
                             <img
                                 src="./images/companies/shield.svg"
+                                loading="lazy"
                                 alt="companies"
                             />
                         </div>
                         <div class="col-span-1 3xl:col-span-2">
                             <img
                                 src="./images/companies/tandov.svg"
+                                loading="lazy"
                                 alt="companies"
                             />
                         </div>
                         <div class="col-span-1 3xl:col-span-2">
                             <img
                                 src="./images/companies/tree.svg"
+                                loading="lazy"
                                 alt="companies"
                             />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="work" class="py-20">
+                <div
+                    class="absolute w-full h-full bg-section-mobile sm:bg-section blur-[390px] -z-10"
+                ></div>
+                <div class="container">
+                    <div class="service-header mb-35">
+                        <h3
+                            class="text-5xl font-inter-bold text-title-section text-center mb-3.5"
+                        >
+                            How it work
+                        </h3>
+                        <p
+                            class="text-text-op-40 max-w-139 mx-auto text-center"
+                        >
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry standard dummy text ever.
+                        </p>
+                    </div>
+
+                    <div
+                        class="service-contents flex flex-col xl:flex-row xl:flex-nowrap items-start justify-between gap-20 xl:gap-7 text-center *:cursor-pointer"
+                    >
+                        <div
+                            class="bg-primary group text-title-section p-8 rounded-2xl relative pt-20 border border-transparent hover:border-app-purple transition-all duration-300"
+                        >
+                            <div
+                                class="absolute rounded-full bg-gradient-to-r w-22 h-22 -top-11 right-0 left-0 mx-auto flex items-center justify-center"
+                            >
+                                <img
+                                    src="./images/work/icon-one.svg"
+                                    alt="Work heads"
+                                />
+                            </div>
+
+                            <img
+                                class="absolute top-6 left-6"
+                                src="./images/icons/bg-arrow.svg"
+                                alt="Bg arrow"
+                            />
+
+                            <h4 class="text-2xl font-inter-bold mb-2">
+                                Create Account
+                            </h4>
+                            <p
+                                class="text-text-op-40 overflow-hidden line-clamp-3 group-hover:h-auto group-hover:line-clamp-none"
+                            >
+                                Lorem Ipsum is simply dummy text of the printing
+                                and typesetting industry. Lorem Ipsum has been
+                                the industry and this standard dummy text ever
+                                since the 1500s, when an unknownprinter took a
+                                galley of type and scrambled it to make a type
+                                specimen book. It has survived
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-primary group text-title-section p-8 rounded-2xl relative pt-20 border border-transparent hover:border-app-purple transition-all duration-300"
+                        >
+                            <div
+                                class="absolute rounded-full bg-gradient-to-r w-22 h-22 -top-11 right-0 left-0 mx-auto flex items-center justify-center"
+                            >
+                                <img
+                                    src="./images/work/icon-two.svg"
+                                    alt="Work heads"
+                                />
+                            </div>
+
+                            <img
+                                class="absolute top-6 left-6"
+                                src="./images/icons/bg-arrow.svg"
+                                alt="Bg arrow"
+                            />
+
+                            <h4 class="text-2xl font-inter-bold mb-2">
+                                Find your Credit
+                            </h4>
+                            <p
+                                class="text-text-op-40 overflow-hidden line-clamp-3 group-hover:h-auto group-hover:line-clamp-none"
+                            >
+                                Lorem Ipsum is simply dummy text of the printing
+                                and typesetting industry. Lorem Ipsum has been
+                                the industry and this standard dummy text ever
+                                since the 1500s, when an unknownprinter took a
+                                galley of type and scrambled it to make a type
+                                specimen book. It has survived
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-primary group text-title-section p-8 rounded-2xl relative pt-20 border border-transparent hover:border-app-purple transition-all duration-300"
+                        >
+                            <div
+                                class="absolute rounded-full bg-gradient-to-r w-22 h-22 -top-11 right-0 left-0 mx-auto flex items-center justify-center"
+                            >
+                                <img
+                                    src="./images/work/icon-three.svg"
+                                    alt="Work heads"
+                                />
+                            </div>
+
+                            <img
+                                class="absolute top-6 left-6"
+                                src="./images/icons/bg-arrow.svg"
+                                alt="Bg arrow"
+                            />
+
+                            <h4 class="text-2xl font-inter-bold mb-2">
+                                Exchange Currency
+                            </h4>
+                            <p
+                                class="text-text-op-40 overflow-hidden line-clamp-3 group-hover:h-auto group-hover:line-clamp-none"
+                            >
+                                Lorem Ipsum is simply dummy text of the printing
+                                and typesetting industry. Lorem Ipsum has been
+                                the industry and this standard dummy text eve
+                                since the 1500s, when an unknownprinter took a
+                                galley of type and scrambled it to make a type
+                                specimen book. It has survived
+                            </p>
                         </div>
                     </div>
                 </div>
