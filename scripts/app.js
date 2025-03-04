@@ -24,6 +24,7 @@ function mobileNavOpen() {
     hamburgerMenu.classList.add('hidden');
     backgroundBlur.classList.remove('hidden');
     navMobile.style.right = '0';
+    document.body.classList.add('overflow-y-hidden');
 }
 
 function closeNavMobile() {
@@ -31,6 +32,7 @@ function closeNavMobile() {
     hamburgerMenu.classList.remove('hidden');
     backgroundBlur.classList.add('hidden');
     navMobile.style.right = '-22.5rem';
+    document.body.classList.remove('overflow-y-hidden');
 }
 
 function openSignInDesktop() {

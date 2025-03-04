@@ -259,7 +259,7 @@
             </div>
         </header>
 
-        <main class="main mt-32">
+        <main class="main pt-32">
             <section id="home-page">
                 <div
                     class="absolute w-full h-full bg-section blur-[390px] -z-10"
@@ -313,7 +313,7 @@
                 </div>
             </section>
 
-            <section id="companies" class="my-20 xl:my-54">
+            <section id="companies" class="py-20 xl:pt-54">
                 <div class="container">
                     <div
                         class="grid grid-cols-2 lg:grid-cols-3 3xl:grid-cols-12 *:mx-auto"
@@ -376,7 +376,7 @@
                             How it work
                         </h3>
                         <p
-                            class="text-text-op-40 max-w-139 mx-auto text-center"
+                            class="text-color-op-40 max-w-139 mx-auto text-center"
                         >
                             Lorem Ipsum is simply dummy text of the printing and
                             typesetting industry. Lorem Ipsum has been the
@@ -385,10 +385,10 @@
                     </div>
 
                     <div
-                        class="service-contents flex flex-col xl:flex-row xl:flex-nowrap items-start justify-between gap-20 xl:gap-7 text-center *:cursor-pointer"
+                        class="service-contents flex flex-col xl:flex-row xl:flex-nowrap items-start justify-between gap-20 xl:gap-7 text-center *:cursor-pointer *:will-change-transform"
                     >
                         <div
-                            class="bg-primary group text-title-section p-8 rounded-2xl relative pt-20 border border-transparent hover:border-app-purple transition-all duration-300"
+                            class="bg-primary group text-title-section p-8 rounded-2xl relative pt-20 border border-transparent hover:border-app-purple hover:scale-105 transition-all duration-300"
                         >
                             <div
                                 class="absolute rounded-full bg-gradient-to-r w-22 h-22 -top-11 right-0 left-0 mx-auto flex items-center justify-center"
@@ -409,7 +409,7 @@
                                 Create Account
                             </h4>
                             <p
-                                class="text-text-op-40 overflow-hidden line-clamp-3 group-hover:h-auto group-hover:line-clamp-none"
+                                class="text-color-op-40 overflow-hidden xl:line-clamp-3 group-hover:h-auto group-hover:line-clamp-none"
                             >
                                 Lorem Ipsum is simply dummy text of the printing
                                 and typesetting industry. Lorem Ipsum has been
@@ -421,7 +421,7 @@
                         </div>
 
                         <div
-                            class="bg-primary group text-title-section p-8 rounded-2xl relative pt-20 border border-transparent hover:border-app-purple transition-all duration-300"
+                            class="bg-primary group text-title-section p-8 rounded-2xl relative pt-20 border border-transparent hover:border-app-purple hover:scale-105 transition-all duration-300"
                         >
                             <div
                                 class="absolute rounded-full bg-gradient-to-r w-22 h-22 -top-11 right-0 left-0 mx-auto flex items-center justify-center"
@@ -442,7 +442,7 @@
                                 Find your Credit
                             </h4>
                             <p
-                                class="text-text-op-40 overflow-hidden line-clamp-3 group-hover:h-auto group-hover:line-clamp-none"
+                                class="text-color-op-40 overflow-hidden xl:line-clamp-3 group-hover:h-auto group-hover:line-clamp-none"
                             >
                                 Lorem Ipsum is simply dummy text of the printing
                                 and typesetting industry. Lorem Ipsum has been
@@ -454,7 +454,7 @@
                         </div>
 
                         <div
-                            class="bg-primary group text-title-section p-8 rounded-2xl relative pt-20 border border-transparent hover:border-app-purple transition-all duration-300"
+                            class="bg-primary group text-title-section p-8 rounded-2xl relative pt-20 border border-transparent hover:border-app-purple hover:scale-105 transition-all duration-300"
                         >
                             <div
                                 class="absolute rounded-full bg-gradient-to-r w-22 h-22 -top-11 right-0 left-0 mx-auto flex items-center justify-center"
@@ -475,7 +475,7 @@
                                 Exchange Currency
                             </h4>
                             <p
-                                class="text-text-op-40 overflow-hidden line-clamp-3 group-hover:h-auto group-hover:line-clamp-none"
+                                class="text-color-op-40 overflow-hidden xl:line-clamp-3 group-hover:h-auto group-hover:line-clamp-none"
                             >
                                 Lorem Ipsum is simply dummy text of the printing
                                 and typesetting industry. Lorem Ipsum has been
@@ -487,6 +487,124 @@
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <section id="table" class="relative pt-20 pb-32 mb-25">
+                <div
+                    class="absolute w-full h-full bg-section blur-[390px] -z-10"
+                ></div>
+
+                <div class="container">
+                    <div
+                        class="bg-table-bg w-full px-4 py-8 xl:p-8 rounded-2xl"
+                    >
+                        <h4 class="text-title-section text-2xl">
+                            Market Trend Live Stream
+                        </h4>
+                        <table class="table-auto w-full mt-10 text-white">
+                            <thead>
+                                <tr
+                                    class="bg-black-trp rounded-2xl *:p-4 text-title-section"
+                                >
+                                    <th class="rounded-s-lg">#</th>
+                                    <th class="text-start">NAME</th>
+                                    <th>PRICE</th>
+                                    <th>CHANGE 24H</th>
+                                    <th>MARKET CAP</th>
+                                    <th class="rounded-e-lg">ACTION</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr class="*:px-4 *:py-6 *:text-center">
+                                    <td>1</td>
+                                    <td class="flex items-center gap-5">
+                                        <img
+                                            class="w-13 h-13"
+                                            src="./images/table/bitcoin.svg"
+                                            alt="Bitcoint Icon"
+                                        />
+                                        Bitcoin (BTC)
+                                    </td>
+                                    <td>$90,000</td>
+                                    <td class="text-app-blue">5.00%</td>
+                                    <td>$94,500</td>
+                                    <td
+                                        class="text-app-blue font-inter-sb cursor-pointer hover:scale-110 transition-transform duration-300 will-change-transform"
+                                    >
+                                        Buy
+                                    </td>
+                                </tr>
+
+                                <tr class="*:px-4 *:py-6 *:text-center">
+                                    <td>2</td>
+                                    <td class="flex items-center gap-5">
+                                        <img
+                                            class="w-13 h-13"
+                                            src="./images/table/cryptoone.svg"
+                                            alt="Bitcoint Icon"
+                                        />
+                                        Ethereum (ETH)
+                                    </td>
+                                    <td>$102,000</td>
+                                    <td class="text-app-blue">3.50%</td>
+                                    <td>$105,570</td>
+                                    <td
+                                        class="text-app-blue font-inter-sb cursor-pointer hover:scale-110 transition-transform duration-300 will-change-transform"
+                                    >
+                                        Buy
+                                    </td>
+                                </tr>
+
+                                <tr class="*:px-4 *:py-6 *:text-center">
+                                    <td>3</td>
+                                    <td class="flex items-center gap-5">
+                                        <img
+                                            class="w-13 h-13"
+                                            src="./images/table/cryptothree.svg"
+                                            alt="Bitcoint Icon"
+                                        />
+                                        Tether (USDT)
+                                    </td>
+                                    <td>$35,000</td>
+                                    <td class="text-app-purple">-4.00%</td>
+                                    <td>$33,600</td>
+                                    <td
+                                        class="text-app-purple font-inter-sb cursor-pointer hover:scale-110 transition-transform duration-300 will-change-transform"
+                                    >
+                                        Sell
+                                    </td>
+                                </tr>
+
+                                <tr class="*:px-4 *:py-6 *:text-center">
+                                    <td>4</td>
+                                    <td class="flex items-center gap-5">
+                                        <img
+                                            class="w-13 h-13"
+                                            src="./images/table/cryptotwo.svg"
+                                            alt="Bitcoint Icon"
+                                        />
+                                        BinanceCoin (BNB)
+                                    </td>
+                                    <td>$20,000</td>
+                                    <td class="text-app-purple">-2.50%</td>
+                                    <td>$19,500</td>
+                                    <td
+                                        class="text-app-purple font-inter-sb cursor-pointer hover:scale-110 transition-transform duration-300 will-change-transform"
+                                    >
+                                        Sell
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <img
+                    src="./images/table/Untitled.svg"
+                    alt="Lines"
+                    class="w-full absolute bottom-0"
+                />
             </section>
         </main>
 
