@@ -9,6 +9,11 @@
             content="about crypto, digital marketing, bitcoin"
         />
         <meta name="author" content="Ramin Haghi" />
+        <link
+            rel="shortcut icon"
+            href="./images/logo/app-logo.png"
+            type="image/png"
+        />
         <link rel="stylesheet" href="./styles/app.css" />
     </head>
 
@@ -496,7 +501,7 @@
 
                 <div class="container">
                     <div
-                        class="bg-table-bg w-full px-4 py-8 xl:p-8 rounded-2xl"
+                        class="table-main bg-table-bg w-full px-4 py-8 xl:p-8 rounded-2xl overflow-auto"
                     >
                         <h4 class="text-title-section text-2xl">
                             Market Trend Live Stream
@@ -504,11 +509,11 @@
                         <table class="table-auto w-full mt-10 text-white">
                             <thead>
                                 <tr
-                                    class="bg-black-trp rounded-2xl *:p-4 text-title-section"
+                                    class="bg-black-trp rounded-2xl *:px-7 *:p-3 text-title-section"
                                 >
                                     <th class="rounded-s-lg">#</th>
                                     <th class="text-start">NAME</th>
-                                    <th>PRICE</th>
+                                    <th class="px-8">PRICE</th>
                                     <th>CHANGE 24H</th>
                                     <th>MARKET CAP</th>
                                     <th class="rounded-e-lg">ACTION</th>
@@ -516,17 +521,21 @@
                             </thead>
 
                             <tbody>
-                                <tr class="*:px-4 *:py-6 *:text-center">
+                                <tr
+                                    class="*:px-7 xl:*:px-4 *:py-6 *:text-center"
+                                >
                                     <td>1</td>
-                                    <td class="flex items-center gap-5">
+                                    <td
+                                        class="flex items-center text-end gap-3 lg:gap-5"
+                                    >
                                         <img
-                                            class="w-13 h-13"
+                                            class="w-10 lg:w-13 h-10 lg:h-13"
                                             src="./images/table/bitcoin.svg"
                                             alt="Bitcoint Icon"
                                         />
-                                        Bitcoin (BTC)
+                                        Bitcoin(BTC)
                                     </td>
-                                    <td>$90,000</td>
+                                    <td class="px-8">$90,000</td>
                                     <td class="text-app-blue">5.00%</td>
                                     <td>$94,500</td>
                                     <td
@@ -536,17 +545,21 @@
                                     </td>
                                 </tr>
 
-                                <tr class="*:px-4 *:py-6 *:text-center">
+                                <tr
+                                    class="*:px-7 xl:*:px-4 *:py-6 *:text-center"
+                                >
                                     <td>2</td>
-                                    <td class="flex items-center gap-5">
+                                    <td
+                                        class="flex items-center gap-3 lg:gap-5"
+                                    >
                                         <img
-                                            class="w-13 h-13"
+                                            class="w-10 lg:w-13 h-10 lg:h-13"
                                             src="./images/table/cryptoone.svg"
                                             alt="Bitcoint Icon"
                                         />
-                                        Ethereum (ETH)
+                                        Ethereum(ETH)
                                     </td>
-                                    <td>$102,000</td>
+                                    <td class="px-8">$102,000</td>
                                     <td class="text-app-blue">3.50%</td>
                                     <td>$105,570</td>
                                     <td
@@ -556,17 +569,21 @@
                                     </td>
                                 </tr>
 
-                                <tr class="*:px-4 *:py-6 *:text-center">
+                                <tr
+                                    class="*:px-7 xl:*:px-4 *:py-6 *:text-center"
+                                >
                                     <td>3</td>
-                                    <td class="flex items-center gap-5">
+                                    <td
+                                        class="flex items-center gap-3 lg:gap-5"
+                                    >
                                         <img
-                                            class="w-13 h-13"
+                                            class="w-10 lg:w-13 h-10 lg:h-13"
                                             src="./images/table/cryptothree.svg"
                                             alt="Bitcoint Icon"
                                         />
-                                        Tether (USDT)
+                                        Tether(USDT)
                                     </td>
-                                    <td>$35,000</td>
+                                    <td class="px-8">$35,000</td>
                                     <td class="text-app-purple">-4.00%</td>
                                     <td>$33,600</td>
                                     <td
@@ -576,17 +593,22 @@
                                     </td>
                                 </tr>
 
-                                <tr class="*:px-4 *:py-6 *:text-center">
+                                <tr
+                                    class="*:px-7 xl:*:px-4 *:py-6 *:text-center"
+                                >
                                     <td>4</td>
-                                    <td class="flex items-center gap-5">
+                                    <td
+                                        class="flex items-center gap-3 lg:gap-5"
+                                    >
                                         <img
-                                            class="w-13 h-13"
+                                            class="w-10 lg:w-13 h-10 lg:h-13"
                                             src="./images/table/cryptotwo.svg"
+                                            loading="lazy"
                                             alt="Bitcoint Icon"
                                         />
-                                        BinanceCoin (BNB)
+                                        BinanceCoin(BNB)
                                     </td>
-                                    <td>$20,000</td>
+                                    <td class="px-8">$20,000</td>
                                     <td class="text-app-purple">-2.50%</td>
                                     <td>$19,500</td>
                                     <td
@@ -603,7 +625,7 @@
                 <img
                     src="./images/table/Untitled.svg"
                     alt="Lines"
-                    class="w-full absolute bottom-0"
+                    class="w-full absolute bottom-18 lg:bottom-3"
                 />
             </section>
         </main>
