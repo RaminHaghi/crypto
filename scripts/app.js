@@ -38,6 +38,7 @@ function closeNavMobile() {
 function openSignInDesktop() {
     bgSignUp.classList.remove('hidden');
     accountForm.style.display = 'flex';
+    document.body.classList.add('overflow-y-hidden');
 }
 
 function openSignUpDesktop() {
@@ -50,11 +51,13 @@ function openSignUpDesktop() {
     submitForm.innerHTML = 'Sign up';
     footerSignIn.classList.add('hidden');
     footerSignUp.classList.remove('hidden');
+    document.body.classList.add('overflow-y-hidden');
 }
 
 function closeSignWindow() {
     bgSignUp.classList.add('hidden');
     accountForm.style.display = 'none';
+    document.body.classList.remove('overflow-y-hidden');
 }
 
 function toSignUp() {
@@ -105,11 +108,12 @@ menuCrossClose.addEventListener('click', closeNavMobile);
 closesubmitForm.addEventListener('click', closeSignWindow);
 signInBtnDesktop.addEventListener('click', openSignInDesktop);
 signUpBtnDesktop.addEventListener('click', openSignUpDesktop);
-submitForm.addEventListener('click', function (event) {
-    event.preventDefault();
-});
 footerSignUpBtn.addEventListener('click', toSignUp);
 footerSignInBtn.addEventListener('click', toSignIn);
 document.body.addEventListener('keydown', closeSignEsc);
 mobileSignInBtn.addEventListener('click', openSignInDesktop);
 mobileSignUpBtn.addEventListener('click', openSignUpDesktop);
+
+submitForm.addEventListener('click', function (event) {
+    event.preventDefault();
+});
