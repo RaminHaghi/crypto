@@ -87,6 +87,18 @@ function closeSignEsc(event) {
     }
 }
 
+hamburgerMenu.addEventListener('click', mobileNavOpen);
+backgroundBlur.addEventListener('click', closeNavMobile);
+menuCrossClose.addEventListener('click', closeNavMobile);
+closesubmitForm.addEventListener('click', closeSignWindow);
+signInBtnDesktop.addEventListener('click', openSignInDesktop);
+signUpBtnDesktop.addEventListener('click', openSignUpDesktop);
+footerSignUpBtn.addEventListener('click', toSignUp);
+footerSignInBtn.addEventListener('click', toSignIn);
+document.body.addEventListener('keydown', closeSignEsc);
+mobileSignInBtn.addEventListener('click', openSignInDesktop);
+mobileSignUpBtn.addEventListener('click', openSignUpDesktop);
+
 window.addEventListener('scroll', function () {
     const header = this.document.querySelector('header');
     if (window.scrollY > 80) {
@@ -101,18 +113,6 @@ window.addEventListener('scroll', function () {
         header.classList.remove('bg-scroll-header');
     }
 });
-
-hamburgerMenu.addEventListener('click', mobileNavOpen);
-backgroundBlur.addEventListener('click', closeNavMobile);
-menuCrossClose.addEventListener('click', closeNavMobile);
-closesubmitForm.addEventListener('click', closeSignWindow);
-signInBtnDesktop.addEventListener('click', openSignInDesktop);
-signUpBtnDesktop.addEventListener('click', openSignUpDesktop);
-footerSignUpBtn.addEventListener('click', toSignUp);
-footerSignInBtn.addEventListener('click', toSignIn);
-document.body.addEventListener('keydown', closeSignEsc);
-mobileSignInBtn.addEventListener('click', openSignInDesktop);
-mobileSignUpBtn.addEventListener('click', openSignUpDesktop);
 
 submitForm.addEventListener('click', function (event) {
     event.preventDefault();
