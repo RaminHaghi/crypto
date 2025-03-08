@@ -466,6 +466,9 @@
   .mb-2\.5 {
     margin-bottom: calc(var(--spacing) * 2.5);
   }
+  .mb-3 {
+    margin-bottom: calc(var(--spacing) * 3);
+  }
   .mb-3\.5 {
     margin-bottom: calc(var(--spacing) * 3.5);
   }
@@ -571,6 +574,9 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
+  .h-0 {
+    height: calc(var(--spacing) * 0);
+  }
   .h-0\.5 {
     height: calc(var(--spacing) * 0.5);
   }
@@ -612,6 +618,9 @@
   }
   .min-h-screen {
     min-height: 100vh;
+  }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
@@ -2417,6 +2426,12 @@
       opacity: 50%;
     }
   }
+  .before\:opacity-60 {
+    &::before {
+      content: var(--tw-content);
+      opacity: 60%;
+    }
+  }
   .before\:transition-transform {
     &::before {
       content: var(--tw-content);
@@ -2875,11 +2890,11 @@
       }
     }
   }
-  .xl\:before\:bg-cover {
+  .xl\:before\:bg-center {
     @media (width >= 1024px) {
       &::before {
         content: var(--tw-content);
-        background-size: cover;
+        background-position: center;
       }
     }
   }
@@ -2982,7 +2997,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 90%;
+    height: 100%;
     margin: auto;
     background-image: url('../images/simple/arrow-bg.png');
     background-size: cover;
