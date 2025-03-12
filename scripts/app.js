@@ -18,6 +18,8 @@ const footerSignUpBtn = document.querySelector('.footer-signup');
 const footerSignInBtn = document.querySelector('.footer-signin');
 const mobileSignInBtn = document.querySelector('.sign-in-btn-mobile');
 const mobileSignUpBtn = document.querySelector('.sign-up-btn-mobile');
+const faqContent = document.querySelector('.faq-content');
+const faqContentText = document.querySelector('.faq-content__text');
 
 function mobileNavOpen() {
     hamburgerMenu.classList.add('menu-open');
@@ -87,6 +89,11 @@ function closeSignEsc(event) {
     }
 }
 
+function openFaqContent() {
+    faqContent.classList.toggle('before:rotate-180');
+    faqContentText.classList.toggle('hidden');
+}
+
 hamburgerMenu.addEventListener('click', mobileNavOpen);
 backgroundBlur.addEventListener('click', closeNavMobile);
 menuCrossClose.addEventListener('click', closeNavMobile);
@@ -98,6 +105,7 @@ footerSignInBtn.addEventListener('click', toSignIn);
 document.body.addEventListener('keydown', closeSignEsc);
 mobileSignInBtn.addEventListener('click', openSignInDesktop);
 mobileSignUpBtn.addEventListener('click', openSignUpDesktop);
+faqContent.addEventListener('click', openFaqContent);
 
 window.addEventListener('scroll', function () {
     const header = this.document.querySelector('header');
