@@ -2984,6 +2984,13 @@
       line-height: var(--tw-leading, var(--text-7xl--line-height));
     }
   }
+  .xl\:\*\:p-9 {
+    @media (width >= 1024px) {
+      :is(& > *) {
+        padding: calc(var(--spacing) * 9);
+      }
+    }
+  }
   .xl\:\*\:px-4 {
     @media (width >= 1024px) {
       :is(& > *) {
@@ -3109,16 +3116,14 @@
     content: ' ';
     display: block;
     position: absolute;
-    top: 22px;
-    right: 22px;
-    margin-top: auto;
-    margin-bottom: auto;
+    top: 13px;
+    right: 13px;
     background-image: url('../images/faq/faq-arrow.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 16px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     transition: all 200ms ease-out;
   }
 }
