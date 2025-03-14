@@ -466,9 +466,6 @@
   .mb-2\.5 {
     margin-bottom: calc(var(--spacing) * 2.5);
   }
-  .mb-3 {
-    margin-bottom: calc(var(--spacing) * 3);
-  }
   .mb-3\.5 {
     margin-bottom: calc(var(--spacing) * 3.5);
   }
@@ -580,9 +577,6 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
-  .h-0 {
-    height: calc(var(--spacing) * 0);
-  }
   .h-0\.5 {
     height: calc(var(--spacing) * 0.5);
   }
@@ -624,9 +618,6 @@
   }
   .min-h-screen {
     min-height: 100vh;
-  }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
@@ -675,6 +666,12 @@
   }
   .max-w-120 {
     max-width: calc(var(--spacing) * 120);
+  }
+  .max-w-137 {
+    max-width: calc(var(--spacing) * 137);
+  }
+  .max-w-138 {
+    max-width: calc(var(--spacing) * 138);
   }
   .max-w-139 {
     max-width: calc(var(--spacing) * 139);
@@ -796,9 +793,6 @@
   }
   .scale-none {
     scale: none;
-  }
-  .rotate-180 {
-    rotate: 180deg;
   }
   .rotate-none {
     rotate: none;
@@ -1118,13 +1112,6 @@
   }
   .gap-20 {
     gap: calc(var(--spacing) * 20);
-  }
-  .space-y-5 {
-    :where(& > :not(:last-child)) {
-      --tw-space-y-reverse: 0;
-      margin-block-start: calc(calc(var(--spacing) * 5) * var(--tw-space-y-reverse));
-      margin-block-end: calc(calc(var(--spacing) * 5) * calc(1 - var(--tw-space-y-reverse)));
-    }
   }
   .space-y-reverse {
     :where(& > :not(:last-child)) {
@@ -1635,8 +1622,8 @@
   .pt-32 {
     padding-top: calc(var(--spacing) * 32);
   }
-  .pr-5 {
-    padding-right: calc(var(--spacing) * 5);
+  .pb-5 {
+    padding-bottom: calc(var(--spacing) * 5);
   }
   .pb-32 {
     padding-bottom: calc(var(--spacing) * 32);
@@ -2271,6 +2258,11 @@
   .transform-view {
     transform-box: view-box;
   }
+  .\*\:relative {
+    :is(& > *) {
+      position: relative;
+    }
+  }
   .\*\:mx-auto {
     :is(& > *) {
       margin-inline: auto;
@@ -2356,11 +2348,6 @@
   .\*\:p-7 {
     :is(& > *) {
       padding: calc(var(--spacing) * 7);
-    }
-  }
-  .\*\:p-9 {
-    :is(& > *) {
-      padding: calc(var(--spacing) * 9);
     }
   }
   .\*\:px-2 {
@@ -2488,6 +2475,14 @@
       transition-property: transform, translate, scale, rotate;
       transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
       transition-duration: var(--tw-duration, var(--default-transition-duration));
+    }
+  }
+  .\*\:before\:will-change-transform {
+    :is(& > *) {
+      &::before {
+        content: var(--tw-content);
+        will-change: transform;
+      }
     }
   }
   .after\:absolute {
@@ -2841,6 +2836,12 @@
       text-align: start;
     }
   }
+  .lg\:text-2xl {
+    @media (width >= 768px) {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+  }
   .\*\:lg\:h-full {
     :is(& > *) {
       @media (width >= 768px) {
@@ -2907,6 +2908,11 @@
       display: flex;
     }
   }
+  .xl\:grid {
+    @media (width >= 1024px) {
+      display: grid;
+    }
+  }
   .xl\:hidden {
     @media (width >= 1024px) {
       display: none;
@@ -2955,6 +2961,16 @@
   .xl\:pt-64 {
     @media (width >= 1024px) {
       padding-top: calc(var(--spacing) * 64);
+    }
+  }
+  .xl\:pr-5 {
+    @media (width >= 1024px) {
+      padding-right: calc(var(--spacing) * 5);
+    }
+  }
+  .xl\:pb-0 {
+    @media (width >= 1024px) {
+      padding-bottom: calc(var(--spacing) * 0);
     }
   }
   .xl\:text-start {
@@ -3093,7 +3109,7 @@
     content: ' ';
     display: block;
     position: absolute;
-    top: 45px;
+    top: 22px;
     right: 22px;
     margin-top: auto;
     margin-bottom: auto;
@@ -3103,6 +3119,7 @@
     background-size: cover;
     width: 16px;
     height: 20px;
+    transition: all 200ms ease-out;
   }
 }
 @property --tw-translate-x {
