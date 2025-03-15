@@ -19,6 +19,7 @@ const footerSignInBtn = document.querySelector('.footer-signin');
 const mobileSignInBtn = document.querySelector('.sign-in-btn-mobile');
 const mobileSignUpBtn = document.querySelector('.sign-up-btn-mobile');
 const faqContents = document.querySelectorAll('.faq-content');
+const scrollToTop = document.querySelector('.scroll-to-top');
 
 function mobileNavOpen() {
     hamburgerMenu.classList.add('menu-open');
@@ -88,6 +89,11 @@ function closeSignEsc(event) {
     }
 }
 
+function scrollTopBody() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
 hamburgerMenu.addEventListener('click', mobileNavOpen);
 backgroundBlur.addEventListener('click', closeNavMobile);
 menuCrossClose.addEventListener('click', closeNavMobile);
@@ -99,6 +105,7 @@ footerSignInBtn.addEventListener('click', toSignIn);
 document.body.addEventListener('keydown', closeSignEsc);
 mobileSignInBtn.addEventListener('click', openSignInDesktop);
 mobileSignUpBtn.addEventListener('click', openSignUpDesktop);
+
 window.addEventListener('scroll', function () {
     const header = this.document.querySelector('header');
     if (window.scrollY > 80) {
@@ -127,3 +134,15 @@ faqContents.forEach(function (faq) {
         }
     });
 });
+
+window.addEventListener('scroll', function () {
+    if (scrollY > 2000) {
+        scrollToTop.classList.remove('hidden');
+        scrollToTop.classList.add('flex');
+    } else {
+        scrollToTop.classList.add('hidden');
+        scrollToTop.classList.remove('flex');
+    }
+});
+
+scrollToTop.addEventListener('click', scrollTopBody);
